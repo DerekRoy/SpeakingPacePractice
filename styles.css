@@ -1,0 +1,33 @@
+h1{
+  text-align: center;
+}
+
+#text{
+  height:50%;
+  width:80%;
+  border:1px solid #ccc;
+  font:16px/26px Georgia, Garamond, Serif;
+  overflow:auto;
+  margin: 0 auto;
+}
+
+#wpm{
+  margin-left: 10%;
+}
+
+#start{
+  float: right;
+  margin-right: 10%;
+  margin-top: 20px;
+}
+
+#upload{
+  margin: 0 auto;
+  display: block;
+  margin-top: 50px;
+}
+
+.inline{
+  display: inline;
+  margin-top: 20px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+        function setup() {
+            document.getElementById('upload').addEventListener('click', openDialog);
+            function openDialog() {
+                document.getElementById('fileid').click();
+            }
+            document.getElementById('fileid').addEventListener('change', submitForm);
+            function submitForm() {
+                document.getElementById('formid').submit();
+            }
+        }
+    </script>
+</head>
+<body onload="setup()">
+  <h1>Speaking Pace Practice</h1>
+  <div id="text">As you can see, once there's enough text in this box, the box will grow scroll bars... that's why we call it a scroll box! You could also place an image into the scroll box.</div>
+  <p class="inline" id="wpm">Words Per Minute: </p>
+  <select class="inline" name="Words Per Minute">
+   <option value="150">150 WPM</option>
+   <option value="155">155 WPM</option>
+   <option value="160">160 WPM</option>
+   <option value="165">165 WPM</option>
+   <option value="170">170 WPM</option>
+   <option value="175">175 WPM</option>
+  </select>
+  <button id="start" type="button">Start</button>
+  <form id='formid' action="convert.php" method="POST" enctype="Content-type:application/pdf">
+      <input id='fileid' name='pdfFile' type='file' name='filename' hidden/>
+      <input id='upload' type='button' value='Upload PDF' />
+  </form>
+</body>
+</html>
